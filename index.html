@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List | Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="bootstrap/css/datepicker.css" rel="stylesheet">
+    <link href="css/todolist.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container" id="page-wrap">
+
+      <header>
+        <h1>Todo</h1>
+        <label>Create and store todo items.</label>
+        <nav><ul class="nav nav-tabs">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul></nav>
+      </header>
+ 
+      <section id="main-content"><div id="guts">
+        <!-- Todo Form -->
+        <form class="well form-todo" id="todo-form">
+
+          <div class="input-append date" id="datepicker" data-date="" data-date-format="dd/mm/yyyy">
+            <input class="span2" size="16" type="text" id="todo-date" placeholder="dd/mm/yyyy">
+            <span class="add-on"><i class="icon-calendar"></i></span>
+          </div>
+
+          <input type="text" class="input-medium" id="todo-subject" placeholder="Task description">
+
+          <div class="btn-group priority-selector">
+            <button class="btn" id="todo-priority">Unimportant</button>
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+	          <li><a>Unimportant</a></li>
+              <li><a>Important</a></li>
+	          <li><a>Urgent</a></li>
+            </ul>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Save</button>
+
+	  </form>
+		
+	 
+        <h2>Todos</h2>
+        <table class="table table-striped table-bordered" id="tasks">
+          <thead>
+            <tr>
+              <th>Due Date</th>
+              <th>Priority</th>
+              <th>Task</th>
+			  <th>#</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+
+      </div></section>
+      
+      <footer>
+	    <div class="navbar navbar-fixed-bottom">
+          <p> Webprojekt ZHAW Z&uuml;rich | Michael Kressibucher</p>
+		</div>
+      </footer>
+    </div>
+
+    <script src="scripts/jquery-2.0.2.min.js"></script>
+    <!-- Load Content dynamically -->
+    <script src="scripts/modernizr.js"></script>
+    <script src="scripts/dynamicpage.js"></script>
+	<!-- Bootstrap -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Date Picker -->
+    <script src="bootstrap/js/bootstrap-datepicker.js"></script>
+    <!-- Todo Handler -->
+    <script src="scripts/todolist.js"></script>
+  </body>
+</html>
